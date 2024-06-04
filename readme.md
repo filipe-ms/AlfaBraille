@@ -1,7 +1,7 @@
 # AlfaBraille 
 # Projeto de Reconhecimento de Fala e Controle de Servo Motores com Arduino - Cesar School 🎤🤖
 
-Este projeto visa combinar o reconhecimento de fala utilizando Python com controle de servo motores utilizando Arduino. O objetivo é permitir que comandos de voz sejam captados, reconhecidos e convertidos em sinais que controlam servos em uma placa Arduino.
+Este projeto visa otimizar o ensino em Braille para deficientes visuais, de uma forma mais simples, prática e engajante, ao combinar o reconhecimento de fala utilizando Python com controle de servo motores utilizando Arduino, fazendo com que o usuário seja capaz de controlá-lo utilizando comandos de voz que serão captados, reconhecidos e convertidos em sinais que controlam servos em uma placa Arduino.
 
 ## Componentes
 

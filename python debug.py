@@ -32,9 +32,9 @@ def to_braille(letra): # Função para mapear os pinos que o arduino vai levanta
                           '01' +
                           '00')
           
-        case 'DÊ': ('11' +
-                    '01' +
-                    '00')
+        case 'DÊ': return ('11' +
+                           '01' +
+                           '00')
           
         case 'E': return ('10' +
                           '01' +

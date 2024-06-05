@@ -175,7 +175,7 @@ def speech_to_text(): # Função que capta o input do microfone e retorna como s
     except sr.UnknownValueError:
         print("Aguardando...")
 
-gamemode = 'seleção' # Modo de funcionamento default
+gamemode = 'aprendizado' # Modo de funcionamento default
 stt = ''
 
 while True:
@@ -253,16 +253,19 @@ while True:
                 time.sleep(2)
         
     while gamemode == 'seleção':
+        stt = ''
         print('que letra') # GRAVAR ISSO
+        lista_comandos = ['MODO APRENDIZADO', 'MODO DESAFIO']
 
-        stt = speech_to_text()
-        if stt == '' or stt == None:
-            while stt == '' or stt == None:
-                stt = speech_to_text()
-                print(stt) # GRAVAR NÃO OUVI // TÁ EMBAIXO PARA DEBUG
+        while stt not in lista_comandos:
+            stt = speech_to_text()
+            if stt == '' or stt == None:
+                while stt == '' or stt == None:
+                    stt = speech_to_text()
+                    print(stt) # GRAVAR NÃO OUVI // TÁ EMBAIXO PARA DEBUG
 
-        letra = stt.split()
-        time.sleep(2)
+            letra = stt.split()
+            time.sleep(2)
 
-        if letra[0]=='LETRA' and len(letra[1])==1:
-            print(to_braille(letra[1])) #arduino.write(f'{to_braille(letra[1])}\r'.encode())
+            if letra[0]=='LETRA' and len(letra[1])==1:
+                print(to_braille(letra[1])) #arduino.write(f'{to_braille(letra[1])}\r'.encode())

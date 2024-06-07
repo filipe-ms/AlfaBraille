@@ -6,13 +6,81 @@ from playsound import playsound
 
 
 # Setup...
-#arduino = serial.Serial('COM16', 9600)
+arduino = serial.Serial('COM3', 9600)
 r=sr.Recognizer()
 
 def reproduzir_audio(audio): # Função para reprodução de audio com python
     match audio:
         case 'A':
-            playsound("./letra_a.mp3")
+            playsound.playsound("./letra_a.wav")
+        case 'B':
+            playsound.playsound("./letra_b.wav")
+        case 'C':
+            playsound.playsound("./letra_c.wav")
+        case 'D':
+            playsound.playsound("./letra_d.wav")
+        case 'DÊ':
+            playsound.playsound("./letra_d.wav")
+        case 'E':
+            playsound.playsound("./letra_e.wav")
+        case 'F':
+            playsound.playsound("./letra_f.wav")
+        case 'G':
+            playsound.playsound("./letra_g.wav")
+        case 'GÊ':
+            playsound.playsound("./letra_g.wav")
+        case 'H':
+            playsound.playsound("./letra_h.wav")
+        case 'I':
+            playsound.playsound("./letra_i.wav")
+        case 'J':
+            playsound.playsound("./letra_j.wav")
+        case 'JOTA':
+            playsound.playsound("./letra_j.wav")
+        case 'K':
+            playsound.playsound("./letra_k.wav")
+        case 'CÁ':
+            playsound.playsound("./letra_k.wav")
+        case 'L':
+            playsound.playsound("./letra_l.wav")
+        case 'ELE':
+            playsound.playsound("./letra_l.wav")
+        case 'M':
+            playsound.playsound("./letra_m.wav")
+        case 'N':
+            playsound.playsound("./letra_n.wav")
+        case 'O':
+            playsound.playsound("./letra_o.wav")
+        case 'P':
+            playsound.playsound("./letra_p.wav")
+        case 'Q':
+            playsound.playsound("./letra_q.wav")
+        case 'QUE':
+            playsound.playsound("./letra_q.wav")
+        case 'QUÊ':
+            playsound.playsound("./letra_q.wav")
+        case 'R':
+            playsound.playsound("./letra_r.wav")
+        case 'S':
+            playsound.playsound("./letra_s.wav")
+        case 'ESSE':
+            playsound.playsound("./letra_s.wav")
+        case 'T':
+            playsound.playsound("./letra_t.wav")
+        case 'U':
+            playsound.playsound("./letra_u.wav")
+        case 'V':
+            playsound.playsound("./letra_v.wav")
+        case 'VÊ':
+            playsound.playsound("./letra_v.wav")
+        case 'W':
+            playsound.playsound("./letra_w.wav")
+        case 'X':
+            playsound.playsound("./letra_x.wav")
+        case 'Y':
+            playsound.playsound("./letra_y.wav")
+        case 'Z':
+            playsound.playsound("./letra_z.wav")
 
 def to_braille(letra): # Função para mapear os pinos que o arduino vai levantar para a representação em braille
       match letra:
@@ -143,7 +211,7 @@ def to_braille(letra): # Função para mapear os pinos que o arduino vai levanta
           
         case 'W': return ('01' +
                           '11' +
-                          '10')
+                          '01')
           
         case 'X': return ('11' +
                           '00' +
@@ -186,7 +254,7 @@ while True:
             stt = ''
             while stt not in lista_comandos:
                 print(f'letra {i}') # GRAVAR ISSO
-                print(to_braille(i)) #arduino.write(f'{to_braille(lista[i])}\r'.encode())
+                arduino.write(f'{to_braille(i)}\r'.encode())
 
                 time.sleep(2)
 
@@ -220,7 +288,7 @@ while True:
             letra_aleatoria = random.choice(lista)
 
             print(letra_aleatoria)
-            print(to_braille(letra_aleatoria)) #arduino.write(f'{to_braille(letra_aleatoria)}\r'.encode())
+            arduino.write(f'{to_braille(letra_aleatoria)}\r'.encode())
             
             print('Que letra') # GRAVAR ISSO
             time.sleep(2)
@@ -268,4 +336,4 @@ while True:
             time.sleep(2)
 
             if letra[0]=='LETRA' and len(letra[1])==1:
-                print(to_braille(letra[1])) #arduino.write(f'{to_braille(letra[1])}\r'.encode())
+                arduino.write(f'{to_braille(letra[1])}\r'.encode())

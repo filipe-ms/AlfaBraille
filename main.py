@@ -12,75 +12,77 @@ r=sr.Recognizer()
 def reproduzir_audio(audio): # Função para reprodução de audio com python
     match audio:
         case 'A':
-            playsound.playsound("./letra_a.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_a.wav")
         case 'B':
-            playsound.playsound("./letra_b.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_b.wav")
         case 'C':
-            playsound.playsound("./letra_c.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_c.wav")
         case 'D':
-            playsound.playsound("./letra_d.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_d.wav")
         case 'DÊ':
-            playsound.playsound("./letra_d.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_d.wav")
         case 'E':
-            playsound.playsound("./letra_e.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_e.wav")
+        case 'Ê':
+            playsound.playsound("./AlfaBraille/audios/letra_e.wav")
         case 'F':
-            playsound.playsound("./letra_f.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_f.wav")
         case 'G':
-            playsound.playsound("./letra_g.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_g.wav")
         case 'GÊ':
-            playsound.playsound("./letra_g.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_g.wav")
         case 'H':
-            playsound.playsound("./letra_h.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_h.wav")
         case 'I':
-            playsound.playsound("./letra_i.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_i.wav")
         case 'J':
-            playsound.playsound("./letra_j.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_j.wav")
         case 'JOTA':
-            playsound.playsound("./letra_j.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_j.wav")
         case 'K':
-            playsound.playsound("./letra_k.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_k.wav")
         case 'CÁ':
-            playsound.playsound("./letra_k.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_k.wav")
         case 'L':
-            playsound.playsound("./letra_l.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_l.wav")
         case 'ELE':
-            playsound.playsound("./letra_l.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_l.wav")
         case 'M':
-            playsound.playsound("./letra_m.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_m.wav")
         case 'N':
-            playsound.playsound("./letra_n.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_n.wav")
         case 'O':
-            playsound.playsound("./letra_o.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_o.wav")
         case 'P':
-            playsound.playsound("./letra_p.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_p.wav")
         case 'Q':
-            playsound.playsound("./letra_q.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_q.wav")
         case 'QUE':
-            playsound.playsound("./letra_q.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_q.wav")
         case 'QUÊ':
-            playsound.playsound("./letra_q.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_q.wav")
         case 'R':
-            playsound.playsound("./letra_r.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_r.wav")
         case 'S':
-            playsound.playsound("./letra_s.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_s.wav")
         case 'ESSE':
-            playsound.playsound("./letra_s.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_s.wav")
         case 'T':
-            playsound.playsound("./letra_t.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_t.wav")
         case 'U':
-            playsound.playsound("./letra_u.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_u.wav")
         case 'V':
-            playsound.playsound("./letra_v.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_v.wav")
         case 'VÊ':
-            playsound.playsound("./letra_v.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_v.wav")
         case 'W':
-            playsound.playsound("./letra_w.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_w.wav")
         case 'X':
-            playsound.playsound("./letra_x.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_x.wav")
         case 'Y':
-            playsound.playsound("./letra_y.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_y.wav")
         case 'Z':
-            playsound.playsound("./letra_z.wav")
+            playsound.playsound("./AlfaBraille/audios/letra_z.wav")
 
 def to_braille(letra): # Função para mapear os pinos que o arduino vai levantar para a representação em braille
       match letra:
@@ -105,6 +107,10 @@ def to_braille(letra): # Função para mapear os pinos que o arduino vai levanta
                            '00')
           
         case 'E': return ('10' +
+                          '01' +
+                          '00')
+          
+        case 'Ê': return ('10' +
                           '01' +
                           '00')
           
@@ -280,7 +286,8 @@ while True:
                 print('não entendi')
 
     while gamemode == 'desafio': # Quando em modo de teste...
-        print('Modo teste ativo') # GRAVAR ISSO
+        playsound.playsound("./AlfaBraille/audios/modo_teste_ativado.wav")
+        #print('Modo teste ativo') # GRAVAR ISSO
         lista_comandos = ['MODO APRENDIZADO', 'MODO SELEÇÃO']
 
         while stt not in lista_comandos:

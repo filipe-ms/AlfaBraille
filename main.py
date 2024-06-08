@@ -305,7 +305,7 @@ while True:
             if stt == '' or stt == None:
                 while stt == '' or stt == None:
                     stt = speech_to_text()
-                    print(stt) # GRAVAR NÃO OUVI // TÁ EMBAIXO PARA DEBUG
+                    playsound.playsound("./AlfaBraille/audios/nao_entendi.wav") # GRAVAR NÃO OUVI // TÁ EMBAIXO PARA DEBUG
             
             elif stt == 'MODO APRENDIZADO':
                 gamemode = 'aprendizado'
@@ -320,9 +320,9 @@ while True:
             
             if guess[0] == 'LETRA' and len(guess[1]) == 1:
                 if guess[1] == letra_aleatoria:
-                    print('Acertou') # GRAVAR ISSO
+                    playsound.playsound("./AlfaBraille/audios/acertou.wav")
                 else:
-                    print(f'Errou! A letra era {letra_aleatoria}!') # GRAVAR ISSO
+                    playsound.playsound("./AlfaBraille/audios/errou.wav")
             else:
                 print('Não entendi! Tenta essa outra:')
                 time.sleep(2)
@@ -337,7 +337,7 @@ while True:
             if stt == '' or stt == None:
                 while stt == '' or stt == None:
                     stt = speech_to_text()
-                    print(stt) # GRAVAR NÃO OUVI // TÁ EMBAIXO PARA DEBUG
+                    playsound.playsound("./AlfaBraille/audios/nao_entendi.wav")
 
             letra = stt.split()
             time.sleep(2)

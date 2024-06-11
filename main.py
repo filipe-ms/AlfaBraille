@@ -2,7 +2,7 @@ import serial
 import random
 import time
 import speech_recognition as sr
-from playsound import playsound
+import playsound
 
 
 # Setup...
@@ -10,79 +10,94 @@ arduino = serial.Serial('COM3', 9600)
 r=sr.Recognizer()
 
 def reproduzir_audio(audio): # Função para reprodução de audio com python
-    match audio:
-        case 'A':
-            playsound.playsound("./AlfaBraille/audios/letra_a.wav")
-        case 'B':
-            playsound.playsound("./AlfaBraille/audios/letra_b.wav")
-        case 'C':
-            playsound.playsound("./AlfaBraille/audios/letra_c.wav")
-        case 'D':
-            playsound.playsound("./AlfaBraille/audios/letra_d.wav")
-        case 'DÊ':
-            playsound.playsound("./AlfaBraille/audios/letra_d.wav")
-        case 'E':
-            playsound.playsound("./AlfaBraille/audios/letra_e.wav")
-        case 'Ê':
-            playsound.playsound("./AlfaBraille/audios/letra_e.wav")
-        case 'F':
-            playsound.playsound("./AlfaBraille/audios/letra_f.wav")
-        case 'G':
-            playsound.playsound("./AlfaBraille/audios/letra_g.wav")
-        case 'GÊ':
-            playsound.playsound("./AlfaBraille/audios/letra_g.wav")
-        case 'H':
-            playsound.playsound("./AlfaBraille/audios/letra_h.wav")
-        case 'I':
-            playsound.playsound("./AlfaBraille/audios/letra_i.wav")
-        case 'J':
-            playsound.playsound("./AlfaBraille/audios/letra_j.wav")
-        case 'JOTA':
-            playsound.playsound("./AlfaBraille/audios/letra_j.wav")
-        case 'K':
-            playsound.playsound("./AlfaBraille/audios/letra_k.wav")
-        case 'CÁ':
-            playsound.playsound("./AlfaBraille/audios/letra_k.wav")
-        case 'L':
-            playsound.playsound("./AlfaBraille/audios/letra_l.wav")
-        case 'ELE':
-            playsound.playsound("./AlfaBraille/audios/letra_l.wav")
-        case 'M':
-            playsound.playsound("./AlfaBraille/audios/letra_m.wav")
-        case 'N':
-            playsound.playsound("./AlfaBraille/audios/letra_n.wav")
-        case 'O':
-            playsound.playsound("./AlfaBraille/audios/letra_o.wav")
-        case 'P':
-            playsound.playsound("./AlfaBraille/audios/letra_p.wav")
-        case 'Q':
-            playsound.playsound("./AlfaBraille/audios/letra_q.wav")
-        case 'QUE':
-            playsound.playsound("./AlfaBraille/audios/letra_q.wav")
-        case 'QUÊ':
-            playsound.playsound("./AlfaBraille/audios/letra_q.wav")
-        case 'R':
-            playsound.playsound("./AlfaBraille/audios/letra_r.wav")
-        case 'S':
-            playsound.playsound("./AlfaBraille/audios/letra_s.wav")
-        case 'ESSE':
-            playsound.playsound("./AlfaBraille/audios/letra_s.wav")
-        case 'T':
-            playsound.playsound("./AlfaBraille/audios/letra_t.wav")
-        case 'U':
-            playsound.playsound("./AlfaBraille/audios/letra_u.wav")
-        case 'V':
-            playsound.playsound("./AlfaBraille/audios/letra_v.wav")
-        case 'VÊ':
-            playsound.playsound("./AlfaBraille/audios/letra_v.wav")
-        case 'W':
-            playsound.playsound("./AlfaBraille/audios/letra_w.wav")
-        case 'X':
-            playsound.playsound("./AlfaBraille/audios/letra_x.wav")
-        case 'Y':
-            playsound.playsound("./AlfaBraille/audios/letra_y.wav")
-        case 'Z':
-            playsound.playsound("./AlfaBraille/audios/letra_z.wav")
+    try:
+        match audio:
+            case 'A':
+                playsound.playsound("./audios/letra_a.wav")
+            case 'B':
+                playsound.playsound("./audios/letra_b.wav")
+            case 'C':
+                playsound.playsound("./audios/letra_c.wav")
+            case 'D':
+                playsound.playsound("./audios/letra_d.wav")
+            case 'DÊ':
+                playsound.playsound("./audios/letra_d.wav")
+            case 'DE':
+                playsound.playsound("./audios/letra_d.wav")
+            case 'E':
+                playsound.playsound("./audios/letra_e.wav")
+            case 'Ê':
+                playsound.playsound("./audios/letra_e.wav")
+            case 'F':
+                playsound.playsound("./audios/letra_f.wav")
+            case 'G':
+                playsound.playsound("./audios/letra_g.wav")
+            case 'GÊ':
+                playsound.playsound("./audios/letra_g.wav")
+            case 'H':
+                playsound.playsound("./audios/letra_h.wav")
+            case 'I':
+                playsound.playsound("./audios/letra_i.wav")
+            case 'J':
+                playsound.playsound("./audios/letra_j.wav")
+            case 'JOTA':
+                playsound.playsound("./audios/letra_j.wav")
+            case 'K':
+                playsound.playsound("./audios/letra_k.wav")
+            case 'CÁ':
+                playsound.playsound("./audios/letra_k.wav")
+            case 'L':
+                playsound.playsound("./audios/letra_l.wav")
+            case 'ELE':
+                playsound.playsound("./audios/letra_l.wav")
+            case 'M':
+                playsound.playsound("./audios/letra_m.wav")
+            case 'N':
+                playsound.playsound("./audios/letra_n.wav")
+            case 'O':
+                playsound.playsound("./audios/letra_o.wav")
+            case 'P':
+                playsound.playsound("./audios/letra_p.wav")
+            case 'Q':
+                playsound.playsound("./audios/letra_q.wav")
+            case 'QUE':
+                playsound.playsound("./audios/letra_q.wav")
+            case 'QUÊ':
+                playsound.playsound("./audios/letra_q.wav")
+            case 'R':
+                playsound.playsound("./audios/letra_r.wav")
+            case 'S':
+                playsound.playsound("./audios/letra_s.wav")
+            case 'ESSE':
+                playsound.playsound("./audios/letra_s.wav")
+            case 'T':
+                playsound.playsound("./audios/letra_t.wav")
+            case 'U':
+                playsound.playsound("./audios/letra_u.wav")
+            case 'V':
+                playsound.playsound("./audios/letra_v.wav")
+            case 'VÊ':
+                playsound.playsound("./audios/letra_v.wav")
+            case 'W':
+                playsound.playsound("./audios/letra_w.wav")
+            case 'X':
+                playsound.playsound("./audios/letra_x.wav")
+            case 'Y':
+                playsound.playsound("./audios/letra_y.wav")
+            case 'Z':
+                playsound.playsound("./audios/letra_z.wav")
+            case 'NÃO ENTENDI':
+                playsound.playsound("./audios/nao_entendi.wav")
+            case 'ACERTOU':
+                playsound.playsound("./audios/acertou.wav")
+            case 'ERROU':
+                playsound.playsound("./audios/errou.wav")
+            case 'MODO TESTE ATIVADO':
+                playsound.playsound("./audios/modo_teste_ativado.wav")
+            case 'PRÓXIMA':
+                playsound.playsound("./audios/proxima.wav")
+    except:
+        pass
 
 def to_braille(letra): # Função para mapear os pinos que o arduino vai levantar para a representação em braille
       match letra:
@@ -238,7 +253,7 @@ def speech_to_text(): # Função que capta o input do microfone e retorna como s
     try:
         with sr.Microphone() as source2: # Use the microphone
             r.adjust_for_ambient_noise(source2, duration=0.2) # Adjust noise threshold
-            speech = r.listen(source2, 5, 5) # Listen to the mic
+            speech = r.listen(source2, 3, 3) # Listen to the mic
             speech_to_text = r.recognize_google(speech, language="pt-BR").upper() # Using google to recognize audio
             print("You said :", speech_to_text)
             return speech_to_text
@@ -247,9 +262,9 @@ def speech_to_text(): # Função que capta o input do microfone e retorna como s
         print("Requisição falhou: {0}".format(e))
          
     except sr.UnknownValueError:
-        print("Aguardando...")
+        playsound.playsound("./audios/aguardando.wav")
 
-gamemode = 'aprendizado' # Modo de funcionamento default
+gamemode = 'seleção' # Modo de funcionamento default
 stt = ''
 
 while True:
@@ -259,22 +274,21 @@ while True:
         for i in lista:
             stt = ''
             while stt not in lista_comandos:
-                print(f'letra {i}') # GRAVAR ISSO
+                print(f'letra {i}')
+                reproduzir_audio(i)
                 arduino.write(f'{to_braille(i)}\r'.encode())
-
                 time.sleep(2)
 
-                print('proxima?') # GRAVAR ISSO
-                
+                reproduzir_audio('PRÓXIMA')                
                 stt = speech_to_text()
                 if stt == '' or stt == None:
                     while stt == '' or stt == None:
-                        # GRAVAR NÃO OUVI
+                        reproduzir_audio('NÃO ENTENDI')
                         stt = speech_to_text()
                         print(stt)
 
 
-            if stt == 'SIM' or stt == 'PRÓXIMA':
+            if stt == 'SIM' or stt == 'PRÓXIMA' or 'PRÓXIMA LETRA':
                 continue
             elif stt == 'MODO DESAFIO':
                 gamemode = 'desafio'
@@ -286,8 +300,7 @@ while True:
                 print('não entendi')
 
     while gamemode == 'desafio': # Quando em modo de teste...
-        playsound.playsound("./AlfaBraille/audios/modo_teste_ativado.wav")
-        #print('Modo teste ativo') # GRAVAR ISSO
+        reproduzir_audio('MODO TESTE ATIVADO')
         lista_comandos = ['MODO APRENDIZADO', 'MODO SELEÇÃO']
 
         while stt not in lista_comandos:
@@ -296,8 +309,9 @@ while True:
 
             print(letra_aleatoria)
             arduino.write(f'{to_braille(letra_aleatoria)}\r'.encode())
-            
-            print('Que letra') # GRAVAR ISSO
+            time.sleep(1)
+            arduino.write(f'{to_braille(i)}\r'.encode())
+            print("Que letra é essa?")
             time.sleep(2)
 
             stt = speech_to_text()
@@ -305,7 +319,7 @@ while True:
             if stt == '' or stt == None:
                 while stt == '' or stt == None:
                     stt = speech_to_text()
-                    playsound.playsound("./AlfaBraille/audios/nao_entendi.wav") # GRAVAR NÃO OUVI // TÁ EMBAIXO PARA DEBUG
+                    reproduzir_audio('NÃO ENTENDI')
             
             elif stt == 'MODO APRENDIZADO':
                 gamemode = 'aprendizado'
@@ -320,27 +334,35 @@ while True:
             
             if guess[0] == 'LETRA' and len(guess[1]) == 1:
                 if guess[1] == letra_aleatoria:
-                    playsound.playsound("./AlfaBraille/audios/acertou.wav")
+                    reproduzir_audio('ACERTOU')
                 else:
-                    playsound.playsound("./AlfaBraille/audios/errou.wav")
+                    reproduzir_audio('ERROU')
             else:
-                print('Não entendi! Tenta essa outra:')
+                reproduzir_audio('NÃO ENTENDI')
                 time.sleep(2)
         
     while gamemode == 'seleção':
         stt = ''
-        print('que letra') # GRAVAR ISSO
         lista_comandos = ['MODO APRENDIZADO', 'MODO DESAFIO']
 
         while stt not in lista_comandos:
-            stt = speech_to_text()
-            if stt == '' or stt == None:
-                while stt == '' or stt == None:
-                    stt = speech_to_text()
-                    playsound.playsound("./AlfaBraille/audios/nao_entendi.wav")
+            try:
+                stt = speech_to_text()
+                if stt == '' or stt == None:
+                    while stt == '' or stt == None:
+                        stt = speech_to_text()
+                        reproduzir_audio('NÃO ENTENDI')
 
-            letra = stt.split()
-            time.sleep(2)
-
-            if letra[0]=='LETRA' and len(letra[1])==1:
-                arduino.write(f'{to_braille(letra[1])}\r'.encode())
+                letra = stt.split()
+                time.sleep(2)
+                if len(stt)==7 and letra[0]=='LETRA':
+                    if letra[0]=='LETRA' and len(letra[1])==1:
+                        arduino.write(f'{to_braille(letra[1])}\r'.encode())
+                if stt == 'MODO APRENDIZADO':
+                    gamemode = 'aprendizado'
+                    break
+                if stt == 'MODO DESAFIO':
+                    gamemode = 'desafio'
+                    break
+            except:
+                pass
